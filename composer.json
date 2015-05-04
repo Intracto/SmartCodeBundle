@@ -1,0 +1,33 @@
+{
+    "name": "intracto/smartcode-bundle",
+    "type": "symfony-bundle",
+    "description": "This bundle provides a way to generate software licenses with Symfony2",
+    "keywords": ["software", "licenses", "generate"],
+    "homepage": "https://github.com/intracto",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joeri Timmermans",
+            "email": "info@pix-art.be"
+        }
+    ],
+
+    "require": {
+        "php":                             ">=5.3.9",        
+        "doctrine/orm":                    "~2.2",
+        "symfony/framework-bundle":        "~2.1",
+        "stof/doctrine-extensions-bundle": "~1.1",
+    },
+
+    "config": {
+        "bin-dir": "bin"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+
+    "autoload": {
+        "psr-0": { "ITR\\SmartCodeBundle": "" }
+    }
+}
