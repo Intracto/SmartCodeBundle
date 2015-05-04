@@ -54,10 +54,10 @@ containing all your options.
     }
 ```
 
-**Amount**: The amount of smart codes you wish to generate for the given payload.
-**UsageLimit**: The amount of times a smart code can be used.
-**ExpiresAt**: The expiry date for a smart code.
-**StartsAt**: The date a smart code can start being used.
+- **Amount**: The amount of smart codes you wish to generate for the given payload.
+- **UsageLimit**: The amount of times a smart code can be used.
+- **ExpiresAt**: The expiry date for a smart code.
+- **StartsAt**: The date a smart code can start being used.
 
 The last thing you would probably want to do is to be able to use these smart codes you just generated.
 This is possible via the SmartCodeAction service, which you can also overwrite by implementing the SmartCodeActionInterface.
