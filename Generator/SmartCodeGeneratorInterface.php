@@ -1,8 +1,8 @@
 <?php
 
-namespace SmartCodeBundle\Generator;
+namespace Intracto\SmartCodeBundle\Generator;
 
-use SmartCodeBundle\Entity\PayloadInterface;
+use Intracto\SmartCodeBundle\Entity\PayloadInterface;
 
 /**
  * Smart code generator interface.

@@ -1,9 +1,9 @@
 <?php
 
-namespace SmartCodeBundle\Action;
+namespace Intracto\SmartCodeBundle\Action;
 
-use SmartCodeBundle\Entity\SmartCodeInterface;
-use SmartCodeBundle\Entity\SubjectInterface;
+use Intracto\SmartCodeBundle\Entity\SmartCodeInterface;
+use Intracto\SmartCodeBundle\Entity\SubjectInterface;
 
 interface SmartCodeActionInterface
 {

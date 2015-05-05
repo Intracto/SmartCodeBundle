@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartCodeBundle\Entity;
+namespace Intracto\SmartCodeBundle\Entity;
 
 /**
  * Smart code interface.

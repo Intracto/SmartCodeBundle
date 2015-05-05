@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartCodeBundle\Exception;
+namespace Intracto\SmartCodeBundle\Exception;
 
 class InvalidSmartCodeException extends \LogicException
 {

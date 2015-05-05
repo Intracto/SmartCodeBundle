@@ -1,12 +1,12 @@
 <?php
 
-namespace SmartCodeBundle\Entity;
+namespace Intracto\SmartCodeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * @ORM\Entity(repositoryClass="SmartCodeBundle\Repository\SmartCodeRepository")
+ * @ORM\Entity(repositoryClass="Intracto\SmartCodeBundle\Repository\SmartCodeRepository")
  * @ORM\Table(name="smartcode")
  */
 class SmartCode implements SmartCodeInterface
@@ -88,7 +88,7 @@ class SmartCode implements SmartCodeInterface
     protected $createdAt;
 
     /**
-     * @ORM\ManyToMany(targetEntity="SmartCodeBundle\Entity\SubjectInterface", mappedBy="smartCodes", fetch="EXTRA_LAZY")
+     * @ORM\ManyToMany(targetEntity="Intracto\SmartCodeBundle\Entity\SubjectInterface", mappedBy="smartCodes", fetch="EXTRA_LAZY")
      **/
     private $subjects;
 

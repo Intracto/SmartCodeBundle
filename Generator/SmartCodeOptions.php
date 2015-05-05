@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartCodeBundle\Generator;
+namespace Intracto\SmartCodeBundle\Generator;
 
 class SmartCodeOptions
 {

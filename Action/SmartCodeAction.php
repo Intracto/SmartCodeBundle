@@ -1,11 +1,11 @@
 <?php
 
-namespace SmartCodeBundle\Action;
+namespace Intracto\SmartCodeBundle\Action;
 
 use Doctrine\ORM\EntityManagerInterface;
-use SmartCodeBundle\Entity\SmartCodeInterface;
-use SmartCodeBundle\Entity\SubjectInterface;
-use SmartCodeBundle\Exception\InvalidSmartCodeException;
+use Intracto\SmartCodeBundle\Entity\SmartCodeInterface;
+use Intracto\SmartCodeBundle\Entity\SubjectInterface;
+use Intracto\SmartCodeBundle\Exception\InvalidSmartCodeException;
 
 class SmartCodeAction implements SmartCodeActionInterface
 {

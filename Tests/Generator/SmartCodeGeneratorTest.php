@@ -1,8 +1,8 @@
 <?php
 
-namespace SmartCodeBundle\Tests\Generator;
+namespace Intracto\SmartCodeBundle\Tests\Generator;
 
-use SmartCodeBundle\Tests\KernelAwareTest;
+use Intracto\SmartCodeBundle\Tests\KernelAwareTest;
 
 class SmartCodeGeneratorTest extends KernelAwareTest
 {

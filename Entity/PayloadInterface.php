@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartCodeBundle\Entity;
+namespace Intracto\SmartCodeBundle\Entity;
 
 use Doctrine\Common\Collections\Collection;
 

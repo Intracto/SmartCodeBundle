@@ -1,9 +1,9 @@
 <?php
 
-namespace SmartCodeBundle\Repository;
+namespace Intracto\SmartCodeBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
-use SmartCodeBundle\Entity\PayloadInterface;
+use Intracto\SmartCodeBundle\Entity\PayloadInterface;
 
 class SmartCodeRepository extends EntityRepository
 {

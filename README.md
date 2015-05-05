@@ -1,5 +1,5 @@
-ITRSmartCodeBundle
-==================
+SmartCodeBundle
+===============
 
 This bundle provides a way to generate software licenses for a given payload. 
 
@@ -11,8 +11,8 @@ How to get started?
 Smart codes have to be bound to a payload this can be done by implementing the PayloadInterface.
 
 ```
-    use ITR\SmartCodeBundle\Entity\PayloadInterface;
-    use ITR\SmartCodeBundle\Entity\SmartCodeInterface;
+    use Intracto\SmartCodeBundle\Entity\PayloadInterface;
+    use Intracto\SmartCodeBundle\Entity\SmartCodeInterface;
     
     class Payload implements PayloadInterface
     {
@@ -20,7 +20,7 @@ Smart codes have to be bound to a payload this can be done by implementing the P
         ...
         
         /**
-         * @ORM\OneToMany(targetEntity="ITR\SmartCodeBundle\Entity\SmartCodeInterface", mappedBy="payload")
+         * @ORM\OneToMany(targetEntity="Intracto\SmartCodeBundle\Entity\SmartCodeInterface", mappedBy="payload")
          *
          * @var SmartCodes[]|ArrayCollection
          */
@@ -74,8 +74,8 @@ To register or unregister a certain smart code you would need a subject that is 
 To make such a subject you can implement the SubjectInterface.
 
 ```
-    use SmartCodeBundle\Entity\SmartCodeInterface;
-    use SmartCodeBundle\Entity\SubjectInterface;
+    use Intracto\SmartCodeBundle\Entity\SmartCodeInterface;
+    use Intracto\SmartCodeBundle\Entity\SubjectInterface;
 
     class User implements SubjectInterface
     {
@@ -83,7 +83,7 @@ To make such a subject you can implement the SubjectInterface.
         ...
         
         /**
-         * @ORM\ManyToMany(targetEntity="SmartCodeBundle\Entity\SmartCodeInterface", inversedBy="subjects")
+         * @ORM\ManyToMany(targetEntity="Intracto\SmartCodeBundle\Entity\SmartCodeInterface", inversedBy="subjects")
          * @ORM\JoinTable(name="user_smartcode",
          *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
          *      inverseJoinColumns={@ORM\JoinColumn(name="smartcode_id", referencedColumnName="id")}

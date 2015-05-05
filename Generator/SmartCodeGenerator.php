@@ -1,10 +1,10 @@
 <?php
 
-namespace SmartCodeBundle\Generator;
+namespace Intracto\SmartCodeBundle\Generator;
 
 use Doctrine\ORM\EntityManagerInterface;
-use SmartCodeBundle\Entity\SmartCode;
-use SmartCodeBundle\Entity\PayloadInterface;
+use Intracto\SmartCodeBundle\Entity\SmartCode;
+use Intracto\SmartCodeBundle\Entity\PayloadInterface;
 
 /**
  * Default smart code generator.

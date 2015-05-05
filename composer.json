@@ -28,6 +28,6 @@
     },
 
     "autoload": {
-        "psr-0": { "ITR\\SmartCodeBundle": "" }
+        "psr-0": { "Intracto\\SmartCodeBundle": "" }
     }
 }

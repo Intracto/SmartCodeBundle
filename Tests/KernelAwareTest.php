@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartCodeBundle\Tests;
+namespace Intracto\SmartCodeBundle\Tests;
 
 require_once dirname(__DIR__).'/../../app/AppKernel.php';
 

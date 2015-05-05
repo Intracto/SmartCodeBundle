@@ -1,6 +1,6 @@
 <?php
 
-namespace SmartCodeBundle;
+namespace Intracto\SmartCodeBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

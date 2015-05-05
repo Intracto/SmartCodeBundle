@@ -1,7 +1,7 @@
 services:
     smartcode.generator.payload_smartcode:
-        class: SmartCodeBundle\Generator\SmartCodeGenerator
+        class: Intracto\SmartCodeBundle\Generator\SmartCodeGenerator
         arguments: ['@doctrine.orm.entity_manager']
     smartcode.action.smartcode:
-        class: SmartCodeBundle\Action\SmartCodeAction
+        class: Intracto\SmartCodeBundle\Action\SmartCodeAction
         arguments: ['@doctrine.orm.entity_manager']
