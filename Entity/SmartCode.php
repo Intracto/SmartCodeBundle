@@ -3,7 +3,6 @@
 namespace Intracto\SmartCodeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="Intracto\SmartCodeBundle\Repository\SmartCodeRepository")
@@ -81,7 +80,6 @@ class SmartCode implements SmartCodeInterface
      * Creation time.
      *
      * @ORM\Column(type="datetime")
-     * @Gedmo\Timestampable(on="create")
      *
      * @var \DateTime
      */

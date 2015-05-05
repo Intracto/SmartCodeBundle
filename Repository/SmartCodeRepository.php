@@ -7,7 +7,7 @@ use Intracto\SmartCodeBundle\Entity\PayloadInterface;
 
 class SmartCodeRepository extends EntityRepository
 {
-    public function findAllCreationGroupsForPayload(PayloadInterface $payload)
+    public function findAllCreationDatesForPayload(PayloadInterface $payload)
     {
         return $this->getEntityManager()
             ->createQuery(
@@ -21,18 +21,18 @@ class SmartCodeRepository extends EntityRepository
             ->getResult();
     }
 
-    public function findAllByCreationGroup(\DateTime $creationGroup, PayloadInterface $payload)
+    public function findAllByCreationDate(\DateTime $creationDate, PayloadInterface $payload)
     {
         return $this->getEntityManager()
             ->createQuery(
                 'SELECT sc
                  FROM SmartCodeBundle:SmartCode sc
-                 WHERE sc.createdAt = :creationGroup
+                 WHERE sc.createdAt = :creationDate
                  AND sc.payload = :payload
                  ORDER BY sc.id ASC'
             )
             ->setParameter('payload', $payload)
-            ->setParameter('creationGroup', $creationGroup)
+            ->setParameter('creationDate', $creationDate)
             ->getResult();
     }
 }

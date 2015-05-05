@@ -27,9 +27,11 @@ class SmartCodeGenerator implements SmartCodeGeneratorInterface
     public function generate(PayloadInterface $payload, SmartCodeOptions $options)
     {
         $codes = array();
+        $now = new \DateTime();
 
         for ($i = 0, $amount = $options->getAmount(); $i < $amount; $i++) {
             $smartCode = new SmartCode($payload);
+            $smartCode->setCreatedAt($now);
             $smartCode->setCode($this->generateUniqueCode());
             $smartCode->setUsageLimit($options->getUsageLimit());
             $smartCode->setExpiresAt($options->getExpiresAt());
