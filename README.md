@@ -5,6 +5,34 @@ This bundle provides a way to generate software licenses for a given payload.
 
 It has been inspired by the [Promotion Bundle](https://github.com/Sylius/SyliusPromotionBundle) of Sylius.
 
+How to install?
+---------------
+Install the bundle via composer
+```
+composer require intracto/smartcode-bundle
+```
+Enable the bundle
+```
+// app/AppKernel.php
+
+// ...
+class AppKernel extends Kernel
+{
+    // ...
+
+    public function registerBundles()
+    {
+        $bundles = array(
+            // ...,
+            new Intracto\SmartCodeBundle\SmartCodeBundle(),
+        );
+
+        // ...
+    }
+}
+```
+
+
 How to get started?
 -------------------
 
@@ -98,3 +126,4 @@ To make such a subject you can implement the SubjectInterface.
     }
 
 ```
+
