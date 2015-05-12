@@ -41,7 +41,7 @@ class SmartCodeAction implements SmartCodeActionInterface
     }
 
     /**
-     * Unregisters the smartCode from its subject
+     * Unregisters the smartCode from its subject.
      *
      * @param SubjectInterface   $subject
      * @param SmartCodeInterface $smartCode
@@ -51,7 +51,7 @@ class SmartCodeAction implements SmartCodeActionInterface
     public function unregister(SubjectInterface $subject, SmartCodeInterface $smartCode)
     {
         $subject->removeSmartCode($smartCode);
-        $smartCode->setUsed($smartCode->getUsed()-1);
+        $smartCode->setUsed($smartCode->getUsed() - 1);
 
         $this->manager->persist($subject);
         $this->manager->flush();

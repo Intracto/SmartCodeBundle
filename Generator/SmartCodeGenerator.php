@@ -61,7 +61,7 @@ class SmartCodeGenerator implements SmartCodeGeneratorInterface
                 $string .= $characters[rand(0, $charactersLength - 1)];
             }
             $chunks = str_split($string, 5);
-            $code = implode("-", $chunks);
+            $code = implode('-', $chunks);
         } while ($this->isUsedCode($code));
 
         return $code;
