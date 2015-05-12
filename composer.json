@@ -28,5 +28,7 @@
 
     "autoload": {
         "psr-0": { "Intracto\\SmartCodeBundle": "" }
-    }
+    },
+
+   "target-dir": "Intracto/SmartCodeBundle"
 }
