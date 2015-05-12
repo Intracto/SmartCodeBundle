@@ -34,6 +34,7 @@ class SmartCodeAction implements SmartCodeActionInterface
         }
 
         $subject->addSmartCode($smartCode);
+        $smartCode->incrementUsed();
 
         $this->manager->persist($subject);
         $this->manager->flush();
@@ -50,6 +51,7 @@ class SmartCodeAction implements SmartCodeActionInterface
     public function unregister(SubjectInterface $subject, SmartCodeInterface $smartCode)
     {
         $subject->removeSmartCode($smartCode);
+        $smartCode->setUsed($smartCode->getUsed()-1);
 
         $this->manager->persist($subject);
         $this->manager->flush();
