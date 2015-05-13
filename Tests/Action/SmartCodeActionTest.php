@@ -3,7 +3,6 @@
 namespace Intracto\SmartCodeBundle\Tests\Generator;
 
 use Intracto\SmartCodeBundle\Action\SmartCodeAction;
-use Intracto\SmartCodeBundle\Entity\SmartCode;
 use Intracto\SmartCodeBundle\Generator\SmartCodeGenerator;
 use Intracto\SmartCodeBundle\Generator\SmartCodeOptions;
 use Intracto\SmartCodeBundle\Tests\BaseTest;
@@ -16,7 +15,6 @@ class SmartCodeActionTest extends BaseTest
     private $code;
 
     /**
-     * @return null
      */
     public function setUp()
     {

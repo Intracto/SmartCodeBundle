@@ -18,7 +18,7 @@ interface SmartCodeActionInterface
     public function register(SubjectInterface $subject, SmartCodeInterface $smartCode);
 
     /**
-     * Unregisters the smartCode from its subject
+     * Unregisters the smartCode from its subject.
      *
      * @param SubjectInterface   $subject
      * @param SmartCodeInterface $smartCode

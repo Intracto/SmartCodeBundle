@@ -11,7 +11,6 @@ class SmartCodeGeneratorTest extends BaseTest
     private $generator;
 
     /**
-     * @return null
      */
     public function setUp()
     {

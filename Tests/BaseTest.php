@@ -11,7 +11,6 @@ abstract class BaseTest extends \PHPUnit_Framework_TestCase
     protected $entityManager;
 
     /**
-     * @return null
      */
     public function setUp()
     {
@@ -19,14 +18,15 @@ abstract class BaseTest extends \PHPUnit_Framework_TestCase
         parent::setUp();
     }
 
-    protected function createLoadedMockedDoctrineRepository($repository, $repositoryName,$repositoryMethod,$repositoryMethodReturnVal) {
-        $mockEM=$this->getMock('\Doctrine\ORM\EntityManager',
+    protected function createLoadedMockedDoctrineRepository($repository, $repositoryName, $repositoryMethod, $repositoryMethodReturnVal)
+    {
+        $mockEM = $this->getMock('\Doctrine\ORM\EntityManager',
             array('getRepository', 'getClassMetadata', 'persist', 'flush'), array(), '', false);
-        $mockSVRepo=$this->getMock($repository,array($repositoryMethod),array(),'',false);
+        $mockSVRepo = $this->getMock($repository, array($repositoryMethod), array(), '', false);
 
         $mockEM->expects($this->any())
             ->method('getClassMetadata')
-            ->will($this->returnValue((object)array('name' => 'aClass')));
+            ->will($this->returnValue((object) array('name' => 'aClass')));
         $mockEM->expects($this->any())
             ->method('persist')
             ->will($this->returnValue(null));
