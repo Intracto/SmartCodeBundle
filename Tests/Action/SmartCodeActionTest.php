@@ -14,8 +14,6 @@ class SmartCodeActionTest extends BaseTest
     private $subject;
     private $code;
 
-    /**
-     */
     public function setUp()
     {
         parent::setUp();

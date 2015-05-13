@@ -10,8 +10,6 @@ abstract class BaseTest extends \PHPUnit_Framework_TestCase
 {
     protected $entityManager;
 
-    /**
-     */
     public function setUp()
     {
         $this->entityManager = $this->createLoadedMockedDoctrineRepository('AppBundle', 'SmartCodeBundle:SmartCode', 'findOneBy', null);
