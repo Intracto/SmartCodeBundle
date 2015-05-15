@@ -32,6 +32,15 @@ class AppKernel extends Kernel
 }
 ```
 
+How to run tests?
+-----------------
+
+```
+    
+    php bin/phpunit
+
+```
+
 
 How to get started?
 -------------------
