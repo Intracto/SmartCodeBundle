@@ -11,18 +11,18 @@ use Doctrine\ORM\Mapping as ORM;
 class SmartCode implements SmartCodeInterface
 {
     /**
-     * Id
+     * Id.
      *
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      *
-     * @var integer
+     * @var int
      */
     protected $id;
 
     /**
-     * Smart code
+     * Smart code.
      *
      * @ORM\Column(type="string", unique=true)
      *
@@ -31,25 +31,25 @@ class SmartCode implements SmartCodeInterface
     protected $code;
 
     /**
-     * Usage limit
+     * Usage limit.
      *
      * @ORM\Column(type="integer", nullable=true)
      *
-     * @var integer
+     * @var int
      */
     protected $usageLimit;
 
     /**
-     * Number of times used
+     * Number of times used.
      *
      * @ORM\Column(type="integer")
      *
-     * @var integer
+     * @var int
      */
     protected $used = 0;
 
     /**
-     * Associated payload
+     * Associated payload.
      *
      * @ORM\ManyToOne(targetEntity="PayloadInterface", inversedBy="smartCodes")
      * @ORM\JoinColumn(name="payload_id", referencedColumnName="id")
@@ -59,7 +59,7 @@ class SmartCode implements SmartCodeInterface
     protected $payload;
 
     /**
-     * Expiration date
+     * Expiration date.
      *
      * @ORM\Column(type="datetime", nullable=true)
      *
@@ -68,7 +68,7 @@ class SmartCode implements SmartCodeInterface
     protected $expiresAt;
 
     /**
-     * Start date
+     * Start date.
      *
      * @ORM\Column(type="datetime")
      *
@@ -96,9 +96,9 @@ class SmartCode implements SmartCodeInterface
     }
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
