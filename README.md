@@ -1,4 +1,4 @@
-SmartCodeBundle
+SmartCodeBundle [![Build Status](https://travis-ci.org/Intracto/SmartCodeBundle.svg)](https://travis-ci.org/Intracto/SmartCodeBundle)
 ===============
 
 This bundle provides a way to generate software licenses for a given payload. 
