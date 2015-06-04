@@ -5,6 +5,7 @@ namespace Intracto\SmartCodeBundle\Generator;
 use Doctrine\ORM\EntityManagerInterface;
 use Intracto\SmartCodeBundle\Entity\SmartCode;
 use Intracto\SmartCodeBundle\Entity\PayloadInterface;
+use Symfony\Component\Config\Tests\Loader\Validator;
 
 /**
  * Default smart code generator.
@@ -36,6 +37,7 @@ class SmartCodeGenerator implements SmartCodeGeneratorInterface
             $smartCode->setUsageLimit($options->getUsageLimit());
             $smartCode->setExpiresAt($options->getExpiresAt());
             $smartCode->setStartsAt($options->getStartsAt());
+            $smartCode->setBatch($options->getBatch());
 
             $codes[] = $smartCode;
             $this->manager->persist($smartCode);

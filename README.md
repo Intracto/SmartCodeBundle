@@ -86,6 +86,7 @@ containing all your options.
         protected $usageLimit;
         protected $expiresAt;
         protected $startsAt;
+        protected $batch;
         
         ...
     }
@@ -95,6 +96,7 @@ containing all your options.
 - **UsageLimit**: The amount of times a smart code can be used.
 - **ExpiresAt**: The expiry date for a smart code.
 - **StartsAt**: The date a smart code can start being used.
+- **Batch**: A name or description you want to give the current generation.
 
 The last thing you would probably want to do is to be able to use these smart codes you just generated.
 This is possible via the SmartCodeAction service, which you can also overwrite by implementing the SmartCodeActionInterface.

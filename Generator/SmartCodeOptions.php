@@ -2,18 +2,56 @@
 
 namespace Intracto\SmartCodeBundle\Generator;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class SmartCodeOptions
 {
+    /**
+     * @Assert\NotBlank()
+     * @Assert\GreaterThan(value = 0)
+     * @Assert\Type(
+     *     type="numeric",
+     *     message="The value {{ value }} is not a valid {{ type }}."
+     * )
+     */
     protected $amount;
+
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      max = 255,
+     *      maxMessage = "The title cannot be longer than {{ limit }} characters"
+     * )
+     */
+    protected $batch;
+
+    /**
+     * @Assert\NotBlank()
+     * @Assert\GreaterThan(value = 0)
+     * @Assert\Type(
+     *     type="numeric",
+     *     message="The value {{ value }} is not a valid {{ type }}."
+     * )
+     */
     protected $usageLimit;
+
+    /**
+     * @Assert\DateTime()
+     */
     protected $expiresAt;
+
+    /**
+     * @Assert\DateTime()
+     */
     protected $startsAt;
 
     public function __construct()
     {
+        $now = new \DateTime();
         $this->amount = 1;
         $this->usageLimit = 1;
-        $this->startsAt = new \DateTime();
+        $this->startsAt = $now;
+        $this->batch = $now->format('d-m-Y H:i:s');
     }
 
     public function getAmount()
@@ -62,5 +100,15 @@ class SmartCodeOptions
         $this->startsAt = $startsAt;
 
         return $this;
+    }
+
+    public function getBatch()
+    {
+        return $this->batch;
+    }
+
+    public function setBatch($batch)
+    {
+        $this->batch = $batch;
     }
 }

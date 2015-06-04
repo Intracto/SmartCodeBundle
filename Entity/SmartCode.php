@@ -86,9 +86,16 @@ class SmartCode implements SmartCodeInterface
     protected $createdAt;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     *
+     * @var string
+     */
+    protected $batch;
+
+    /**
      * @ORM\ManyToMany(targetEntity="Intracto\SmartCodeBundle\Entity\SubjectInterface", mappedBy="smartCodes", fetch="EXTRA_LAZY")
      **/
-    private $subjects;
+    protected $subjects;
 
     public function __construct(PayloadInterface $payload)
     {
@@ -255,6 +262,22 @@ class SmartCode implements SmartCodeInterface
     public function setSubjects($subjects)
     {
         $this->subjects = $subjects;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBatch()
+    {
+        return $this->batch;
+    }
+
+    /**
+     * @param string $batch
+     */
+    public function setBatch($batch)
+    {
+        $this->batch = $batch;
     }
 
     /**
