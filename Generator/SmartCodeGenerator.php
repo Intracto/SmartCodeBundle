@@ -53,8 +53,6 @@ class SmartCodeGenerator implements SmartCodeGeneratorInterface
      */
     public function generateUniqueCode()
     {
-        $code = null;
-
         do {
             $characters = 'ABCDEFGHIJKLMNPQRSTUVWXYZ1234567890';
             $charactersLength = strlen($characters);
