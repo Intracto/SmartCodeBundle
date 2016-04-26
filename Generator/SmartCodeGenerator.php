@@ -5,7 +5,6 @@ namespace Intracto\SmartCodeBundle\Generator;
 use Doctrine\ORM\EntityManagerInterface;
 use Intracto\SmartCodeBundle\Entity\SmartCode;
 use Intracto\SmartCodeBundle\Entity\PayloadInterface;
-use Symfony\Component\Config\Tests\Loader\Validator;
 
 /**
  * Default smart code generator.
@@ -30,7 +29,7 @@ class SmartCodeGenerator implements SmartCodeGeneratorInterface
         $codes = array();
         $now = new \DateTime();
 
-        for ($i = 0, $amount = $options->getAmount(); $i < $amount; $i++) {
+        for ($i = 0, $amount = $options->getAmount(); $i < $amount; ++$i) {
             $smartCode = new SmartCode($payload);
             $smartCode->setCreatedAt($now);
             $smartCode->setCode($this->generateUniqueCode());
@@ -57,7 +56,7 @@ class SmartCodeGenerator implements SmartCodeGeneratorInterface
             $characters = 'ABCDEFGHIJKLMNPQRSTUVWXYZ1234567890';
             $charactersLength = strlen($characters);
             $string = '';
-            for ($i = 0; $i < 20; $i++) {
+            for ($i = 0; $i < 20; ++$i) {
                 $string .= $characters[rand(0, $charactersLength - 1)];
             }
             $chunks = str_split($string, 5);
@@ -70,7 +69,7 @@ class SmartCodeGenerator implements SmartCodeGeneratorInterface
     /**
      * @param string $code
      *
-     * @return Boolean
+     * @return bool
      */
     protected function isUsedCode($code)
     {

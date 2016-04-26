@@ -99,7 +99,7 @@ interface SmartCodeInterface
     /**
      * Is this coupon valid?
      *
-     * @return Boolean
+     * @return bool
      */
     public function isValid();
 }

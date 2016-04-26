@@ -14,12 +14,12 @@ interface PayloadInterface
     /**
      * @param SmartCodeInterface $smartCode
      *
-     * @return Boolean
+     * @return bool
      */
     public function hasSmartCode(SmartCodeInterface $smartCode);
 
     /**
-     * @return Boolean
+     * @return bool
      */
     public function hasSmartCodes();
 

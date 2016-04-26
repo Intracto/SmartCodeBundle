@@ -171,7 +171,7 @@ class SmartCode implements SmartCodeInterface
      */
     public function incrementUsed()
     {
-        $this->used++;
+        ++$this->used;
 
         return $this;
     }

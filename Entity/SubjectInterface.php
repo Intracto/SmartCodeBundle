@@ -9,7 +9,7 @@ interface SubjectInterface
      *
      * @param SmartCodeInterface $smartCode
      *
-     * @return Boolean
+     * @return bool
      */
     public function hasSmartCode(SmartCodeInterface $smartCode);
 
@@ -18,7 +18,7 @@ interface SubjectInterface
      *
      * @param PayloadInterface $payload
      *
-     * @return Boolean
+     * @return bool
      */
     public function hasSmartCodeForPayload(PayloadInterface $payload);
 

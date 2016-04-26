@@ -9,7 +9,7 @@ use Intracto\SmartCodeBundle\Tests\BaseTest;
 class SmartCodeGeneratorTest extends BaseTest
 {
     private $generator;
-    
+
     public function setUp()
     {
         parent::setUp();
