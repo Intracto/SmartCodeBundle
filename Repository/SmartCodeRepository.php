@@ -11,7 +11,7 @@ class SmartCodeRepository extends EntityRepository
     {
         return $this->getEntityManager()
             ->createQuery(
-                'SELECT sc.batch, sc.createdAt, sc.usageLimit, sc.startsAt, sc.expiresAt, count(sc.id) as total
+                'SELECT sc.batch, sc.createdAt, sc.usageLimit, sc.startsAt, sc.expiresAt, count(sc.id) as total, sum(sc.used) as used
                  FROM SmartCodeBundle:SmartCode sc
                  WHERE sc.payload = :payload
                  GROUP BY sc.batch
