@@ -13,10 +13,10 @@
     ],
 
     "require": {
-        "php":                             ">=5.3.9",        
-        "doctrine/orm":                    "~2.2",
-        "symfony/framework-bundle":        "~2.3",
-        "symfony/validator":               "~2.3"
+        "php":                             ">=7.2",
+        "doctrine/orm":                    "~2.4",
+        "symfony/framework-bundle":        "~3.4",
+        "symfony/validator":               "~3.4"
     },
 
     "config": {
