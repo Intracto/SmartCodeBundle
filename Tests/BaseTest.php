@@ -2,25 +2,34 @@
 
 namespace Intracto\SmartCodeBundle\Tests;
 
+use Intracto\SmartCodeBundle\Entity\SmartCode;
+use Intracto\SmartCodeBundle\Repository\SmartCodeRepository;
+use Doctrine\ORM\EntityManager;
+use PHPUnit\Framework\TestCase;
+
 /**
  * Test case class helpful with Entity tests requiring the database interaction.
- * For regular entity tests it's better to extend standard \PHPUnit_Framework_TestCase instead.
+ * For regular entity tests it's better to extend standard PHPUnit\Framework\TestCase instead.
  */
-abstract class BaseTest extends \PHPUnit_Framework_TestCase
+abstract class BaseTest extends TestCase
 {
     protected $entityManager;
 
-    public function setUp()
+    protected function setUp(): void
     {
-        $this->entityManager = $this->createLoadedMockedDoctrineRepository('AppBundle', 'SmartCodeBundle:SmartCode', 'findOneBy', null);
+        $this->entityManager = $this->createLoadedMockedDoctrineRepository(
+            SmartCodeRepository::class,
+            SmartCode::class,
+            'findOneBy',
+            null
+        );
         parent::setUp();
     }
 
     protected function createLoadedMockedDoctrineRepository($repository, $repositoryName, $repositoryMethod, $repositoryMethodReturnVal)
     {
-        $mockEM = $this->getMock('\Doctrine\ORM\EntityManager',
-            array('getRepository', 'getClassMetadata', 'persist', 'flush'), array(), '', false);
-        $mockSVRepo = $this->getMock($repository, array($repositoryMethod), array(), '', false);
+        $mockEM = $this->createMock(EntityManager::class);
+        $mockSVRepo = $this->createMock($repository);
 
         $mockEM->expects($this->any())
             ->method('getClassMetadata')

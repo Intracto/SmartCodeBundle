@@ -3,6 +3,9 @@
 namespace Intracto\SmartCodeBundle\Tests\Generator;
 
 use Intracto\SmartCodeBundle\Action\SmartCodeAction;
+use Intracto\SmartCodeBundle\Action\SmartCodeActionInterface;
+use Intracto\SmartCodeBundle\Entity\PayloadInterface;
+use Intracto\SmartCodeBundle\Entity\SubjectInterface;
 use Intracto\SmartCodeBundle\Generator\SmartCodeGenerator;
 use Intracto\SmartCodeBundle\Generator\SmartCodeOptions;
 use Intracto\SmartCodeBundle\Tests\BaseTest;
@@ -14,14 +17,14 @@ class SmartCodeActionTest extends BaseTest
     private $subject;
     private $code;
 
-    public function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->action = new SmartCodeAction($this->entityManager);
         $this->generator = new SmartCodeGenerator($this->entityManager);
-        $this->subject = $this->getMock('Intracto\SmartCodeBundle\Entity\SubjectInterface');
+        $this->subject = $this->createMock(SubjectInterface::class);
 
-        $payload = $this->getMock('Intracto\SmartCodeBundle\Entity\PayloadInterface');
+        $payload = $this->createMock(PayloadInterface::class);
         $options = new SmartCodeOptions();
         $options->setAmount(1);
         $codes = $this->generator->generate($payload, $options);
@@ -30,7 +33,7 @@ class SmartCodeActionTest extends BaseTest
 
     public function testGenerator()
     {
-        $this->assertInstanceOf('Intracto\SmartCodeBundle\Action\SmartCodeActionInterface', $this->action);
+        $this->assertInstanceOf(SmartCodeActionInterface::class, $this->action);
     }
 
     public function testRegister()

@@ -73,6 +73,6 @@ class SmartCodeGenerator implements SmartCodeGeneratorInterface
      */
     protected function isUsedCode($code)
     {
-        return null !== $this->manager->getRepository('SmartCodeBundle:SmartCode')->findOneBy(array('code' => $code));
+        return null !== $this->manager->getRepository(SmartCode::class)->findOneBy(array('code' => $code));
     }
 }
