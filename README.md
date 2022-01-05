@@ -1,4 +1,4 @@
-SmartCodeBundle [![Build Status](https://travis-ci.org/Intracto/SmartCodeBundle.svg)](https://travis-ci.org/Intracto/SmartCodeBundle) [![Scrutinizer](https://scrutinizer-ci.com/g/Intracto/SmartCodeBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Intracto/SmartCodeBundle/) 
+SmartCodeBundle [![Run tests](https://github.com/Intracto/SmartCodeBundle/actions/workflows/run-test.yml/badge.svg)](https://github.com/Intracto/SmartCodeBundle/actions/workflows/run-test.yml) [![Scrutinizer](https://scrutinizer-ci.com/g/Intracto/SmartCodeBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Intracto/SmartCodeBundle/) 
 ===============
 
 This bundle provides a way to generate software licenses for a given payload. 

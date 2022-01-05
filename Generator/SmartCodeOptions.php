@@ -36,12 +36,12 @@ class SmartCodeOptions
     protected $usageLimit;
 
     /**
-     * @Assert\DateTime()
+     * @Assert\Type("DateTime")
      */
     protected $expiresAt;
 
     /**
-     * @Assert\DateTime()
+     * @Assert\Type("DateTime")
      */
     protected $startsAt;
 

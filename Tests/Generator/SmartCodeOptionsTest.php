@@ -10,10 +10,11 @@ class SmartCodeOptionsTest extends BaseTest
 {
     private $validator;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->validator = Validation::createValidatorBuilder()
-                                    ->enableAnnotationMapping()
+                                    ->enableAnnotationMapping(true)
+                                    ->addDefaultDoctrineAnnotationReader()
                                     ->getValidator();
     }
 
