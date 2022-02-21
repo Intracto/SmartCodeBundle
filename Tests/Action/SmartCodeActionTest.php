@@ -1,6 +1,6 @@
 <?php
 
-namespace Intracto\SmartCodeBundle\Tests\Generator;
+namespace Intracto\SmartCodeBundle\Tests\Action;
 
 use Intracto\SmartCodeBundle\Action\SmartCodeAction;
 use Intracto\SmartCodeBundle\Action\SmartCodeActionInterface;
