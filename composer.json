@@ -16,7 +16,9 @@
         "php":                             ">=7.4",
         "doctrine/orm":                    "~2.10",
         "symfony/framework-bundle":        "~5.4",
-        "symfony/validator":               "~5.4"
+        "symfony/validator":               "~5.4",
+        "doctrine/annotations": "^1.13",
+        "symfony/cache": "^6.0"
     },
 
     "config": {
