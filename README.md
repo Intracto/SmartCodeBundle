@@ -1,4 +1,6 @@
-# IF YOU USE THIS BUNDLE, CONTACT @tvlooy ABOUT OWNERSHIP
+# Needs maintainer
+
+If you use this bundle, contact @tvlooy about ownership.
 
 SmartCodeBundle [![Run tests](https://github.com/Intracto/SmartCodeBundle/actions/workflows/run-test.yml/badge.svg)](https://github.com/Intracto/SmartCodeBundle/actions/workflows/run-test.yml) [![Scrutinizer](https://scrutinizer-ci.com/g/Intracto/SmartCodeBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Intracto/SmartCodeBundle/) 
 ===============
