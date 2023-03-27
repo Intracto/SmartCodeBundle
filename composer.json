@@ -33,5 +33,5 @@
     "autoload": {
         "psr-0": { "Intracto\\SmartCodeBundle": "" },
         "psr-4": { "Intracto\\SmartCodeBundle\\": "" }
-    },
+    }
 }
